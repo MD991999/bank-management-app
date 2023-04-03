@@ -1,0 +1,13 @@
+.bank-logo-image{
+    mix-blend-mode: multiply;
+}
+.name-bank{
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'EB Garamond', serif;
+vertical-align: middle;
+color:rgb(118, 7, 29);  margin-left: 5px;
+}
+.navbar{
+    background-color:rgba(67, 51, 46, 0.8);
+}

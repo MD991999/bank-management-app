@@ -1,0 +1,56 @@
+<div>
+    <div class="row ">
+        <div class="row p-4 first-div-row">
+            <h1 class="transaction-heading">Transactions</h1>
+            <p class="transaction-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis id ratione
+                magnam iusto veniam ullam nisi
+                nam repudiandae cupiditate, deleniti quae quas aperiam velit ut libero porro quos. Nisi, reprehenderit.
+                Quisquam enim ipsum a perspiciatis delectus, maxime, eum accusamus blanditiis ducimus harum neque illum
+                veritatis rerum fuga labore, autem ad quae? Ducimus labore sapiente quidem dignissimos officiis aut
+                quibusdam assumenda!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <h1 class="p-3 text-center text-danger mt-3 mb-5">Transaction history</h1>
+        </div>
+        <div class="row second-row">
+
+            <div class="col-6 second-row-parent-div">
+                <h4 class="p-2"> Search by: </h4>
+                <input type="text" class="form-control w-50  fs-5 border-secondary" (keyup)="filter($event)" placeholder="Transaction Type">
+
+            </div>
+            <div class="col-6">
+                <button class="btn btn-primary p-2 w-25 fs-5" (click)="generatepdf()">Export</button>
+
+            </div>
+
+        </div>
+        <div class="row  p-5">
+            <table class="table table-success table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Sl no.</th>
+                    <th scope="col">Transaction Type</th>
+                    <th scope="col">From Account</th>
+                    <th scope="col">To Account</th>
+                    <th scope="col">Amount</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let transactions of alltransactions | search :searchterm:'type' ;let i=index;">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{transactions.type}}</td>
+                    <td>{{transactions.fromacno}}</td>
+                    <td>{{transactions.toacno}}</td>
+                    <td>{{transactions.amount}}</td>
+
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+</div>

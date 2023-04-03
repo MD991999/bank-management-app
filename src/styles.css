@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+Infant:ital,wght@1,300;1,500&family=EB+Garamond:wght@400;500&family=Eczar:wght@400;500&family=Fredericka+the+Great&family=Labrada&family=Satisfy&display=swap');
+/* font-family: 'Acme', sans-serif;
+font-family: 'Cormorant Infant', serif;
+font-family: 'EB Garamond', serif;
+font-family: 'Eczar', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Labrada', serif;
+font-family: 'Satisfy', cursive; */
+*{
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    /* mix-blend-mode: multiply; */
+}

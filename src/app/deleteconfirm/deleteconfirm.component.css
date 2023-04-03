@@ -1,0 +1,12 @@
+.delete-confirmation{
+   text-align: center;
+
+}
+.buttonfamily{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center;
+    justify-self:center; */
+    padding: 50px;
+    margin: auto;
+}

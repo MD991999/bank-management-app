@@ -1,0 +1,54 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+<!-- login page design -->
+<div class="">
+    <div class="row parent-div 
+    ">
+        <div class="col-lg-7">
+            <!-- img -->
+            <img class="m-5"  width="500px"
+                src="https://i.pinimg.com/564x/92/25/9f/92259ffb26500c02aac2bfac2d0a4fa5.jpg" alt="bank-image">
+        </div>
+        <div class="col-lg-5 ">
+            <form [formGroup]='loginform' style="margin-top: 20%;" class="application border rounded me-5 p-5" (ngSubmit)="login()">
+                <h1 class="text-center text-success fs-1">LOGIN</h1>
+
+                <!-- acno -->
+                <div class="form-floating mb-3 mt-5 me-5">
+                    <input name="acno" formControlName="acno" type="text" class="form-control border-dark text-dark" id="floatinginput"
+                        placeholder="Account Number">
+                    <label for="floatinginput">Account Number</label>
+                </div>
+                <!-- acno validation -->
+                <div *ngIf="this.loginform.get('acno')?.errors && this.loginform.get('acno')?.touched"
+                    class="text-danger mb-2">Invalid Account Number
+
+                </div>
+                <!-- password -->
+                <div class="form-floating  mb-3 mt-5 me-5">
+                    <input name="password" type="password" formControlName="password" class="text-dark border-dark form-control"
+                        id="floatingpassword" placeholder="Password">
+                    <label for="floatingpassword">Password</label>
+                </div>
+                <!-- password validation -->
+                <div *ngIf="this.loginform.get('password')?.errors && this.loginform.get('password')?.touched"
+                    class="text-danger mb-2">Invalid Password
+
+                </div>
+                <!-- error msg -->
+                <div class="text-danger">
+                    {{errormsg}}
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Login
+                        <!-- bootstrap-spinnercode -->
+                        <div *ngIf="successmsg" style="font-size:15px"class="spinner-border text-light" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </button>
+                    <span class="ms-2">New user?Click here to <a routerLink="register">Register</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

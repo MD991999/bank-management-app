@@ -1,0 +1,26 @@
+.transaction-heading{
+    font-family: 'EB Garamond', serif;
+    color: blue;
+}
+.transaction-paragraph{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.first-div-row{
+    background-color: lightcoral;
+}
+.second-row-parent-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.second-row-parent-div p{
+font-size: 20px;
+}
+.second-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
